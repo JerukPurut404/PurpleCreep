@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: #fafafa;
+  color: #262626;
+  padding-bottom: 3rem;
+}
+
+.submit_form{
+  background-color: #cba6f7;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0.5rem;
+}
+
+.submit_form h1{
+  font-weight: 600;
+  font-size: 3rem;
+  color: #222;
+}
+
+#username-input{
+  width: 100%;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  color: #222;
+}
+
+
+.post-container {
+  max-width: 93.5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.post-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.post-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.post-item img, .stories-items img {
+  width: 200px; 
+  height: 200px; 
+  border-radius: 50%;
+}
+
+.post-item h3 {
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.stories-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.stories-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.stories-items video {
+  width: 200px; 
+  height: auto; 
+}

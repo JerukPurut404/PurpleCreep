@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PurpleCreep</title>
+  <link rel="stylesheet" href="static/style2.css">
+</head>
+<body>
+  <div class="post-container">
+    <div class="info-container">
+      <img class="user-info-pic" src="{{ url_for('static', filename=info_items[0]['profile_pic']) }}" alt="{{ info_items[0]['username'] }} profile pic">
+        <div class="user-info-sec2">
+          <span class="username-info">@{{ info_items[0]['username'] }}</span>
+          <ul class="user-info-stats">
+            <li class="follower-count">{{ info_items[0]['follower'] }} followers</li>
+            <li class="following-count">{{ info_items[0]['following'] }} following</li>
+            <li class="posts-count">{{ info_items[0]['posts_count'] }} posts</li>
+          </ul>
+          <p class="user-info-fullname">{{ info_items[0]['full_name'] }}</p>
+          <p class="user-info-bio">{{ info_items[0]['bio'] }}</p>
+        </div>
+    </div>
+    <h2>POSTS:</h2>
+    {% for item in feed_items %}
+    <div class="post-item">
+      <img src="{{ url_for('static', filename=item.thumbnail) }}" alt="{{ item.title }}" class="post-image">
+      <div class="post-item-info">
+        <a href="{{ item.post_link }}">
+        <h3 class="post-title">{{ item.title }}</h3>
+        <h3 class="post-likes">{{ item.likes}} likes</h3>
+        <h3 class="post-comments">{{ item.comments}} comments</h3>
+        <h3 class="post-timestamp">{{ item.timestamp}}</h3>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+    <div class="stories-containter">
+      <h1>User Stories</h1>
+      <div class="stories-items">
+        {% for story_item in stories_items %}
+            {% for image_url in story_item.image_urls %}
+                <img class="images-stories" src="{{ url_for('static', filename=image_url) }}" alt="Story Image">
+            {% endfor %}
+            
+            {% for video_url in story_item.video_urls %}
+                <video class="video-stories" controls>
+                    <source src="{{ url_for('static', filename=video_url) }}" type="video/mp4">
+                </video>
+            {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

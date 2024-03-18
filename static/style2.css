@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: #fafafa;
+  color: #262626;
+  padding-bottom: 3rem;
+  margin: 2rem;
+}
+
+.post-container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.info-container{
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.info-container .username-info{
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.info-container .user-info-stats{
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+.info-container .user-info-pic{
+  width: 40%;
+  box-shadow: 15px 15px 20px -1px rgba(0,0,0,0.54);
+}
+
+.user-info-sec2{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.user-info-sec2 .user-info-bio{
+  font-size: 1.6rem;
+}
+
+
+
+/* USER POSTS STYLE */
+
+.post-item{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.post-item a{
+  color: #262626;
+  text-decoration: none;
+}
+
+.post-item .post-title{
+  font-size: 2rem;
+}
+
+.post-item .post-item-info{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.post-item .post-image{
+  width:40rem;
+}
+
+/* USER STORIES STYLE */
+
+.stories-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.stories-items{
+  display: block;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.images-stories, .video-stories{
+  width: 40rem;
+}
